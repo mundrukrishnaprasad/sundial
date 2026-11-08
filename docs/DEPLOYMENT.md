@@ -90,6 +90,25 @@ The preview uses the local `.env` files for runtime secrets. Production cookies 
 - Logs: `npx wrangler tail`.
 - Rollback: Cloudflare keeps previous deployments. Use the dashboard’s deployment list or `npx wrangler rollback`.
 
+## Current deployment
+
+| Item | Value |
+| --- | --- |
+| Worker | `sundial` |
+| URL | https://sundial.kp489292.workers.dev |
+| Account | `Kp489292@gmail.com` (`0294798ba9ae6e78d8be8a06ad29f014`) |
+| Database | Neon PostgreSQL, `sundial` database |
+| Runtime secrets | `DATABASE_URL`, `AUTH_SECRET` set with `wrangler secret put` |
+
+To redeploy after a change:
+
+```bash
+npm run build:cf
+npx wrangler deploy
+```
+
+The GitHub Actions deploy workflow is optional. Add the four repository secrets listed above if you want to deploy from CI instead of a local shell.
+
 ## Troubleshooting
 
 | Symptom | Likely cause |

@@ -6,6 +6,8 @@ Sundial is a small, complete SaaS application: employees enter a week against pr
 
 This is a portfolio project, not a commercial service.
 
+**Live demo:** https://sundial.kp489292.workers.dev — sign in with any account below. The database is seeded for evaluation and can be reset with `npm run db:reset`.
+
 ## What is included
 
 - **Weekly timesheets** — add, edit, and delete entries; totals, billable hours, and utilization update immediately.
@@ -169,7 +171,7 @@ Unit tests cover date handling, utilization math, CSV escaping, and password has
 
 ## Deployment
 
-The application is designed for Cloudflare Workers with a Neon database. The full procedure is in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md). In short:
+The application is designed for Cloudflare Workers with a Neon database. The full procedure is in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md). The current public deployment is at **https://sundial.kp489292.workers.dev**. In short:
 
 1. Create a Neon database and schema.
 2. Set `DATABASE_URL` and `AUTH_SECRET` as Worker secrets.
