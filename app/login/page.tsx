@@ -64,7 +64,7 @@ export default async function LoginPage() {
           aria-hidden="true"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 25% 20%, #dfd5bf 0, transparent 34%), radial-gradient(circle at 80% 70%, #aebc8e 0, transparent 40%)",
+              "radial-gradient(circle at 25% 20%, #e3e8fe 0, transparent 34%), radial-gradient(circle at 80% 70%, #9dbbf8 0, transparent 40%)",
           }}
         />
         <div className="relative">

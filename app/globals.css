@@ -4,30 +4,30 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
 
-  --color-cream-50: #fbf8f1;
-  --color-cream-100: #f5f0e3;
-  --color-cream-200: #ece5d3;
-  --color-cream-300: #dfd5bf;
+  --color-cream-50: #ffffff;
+  --color-cream-100: #f6f6f6;
+  --color-cream-200: #e9e9e9;
+  --color-cream-300: #d8d9de;
 
-  --color-paper: #fffdf8;
+  --color-paper: #ffffff;
 
-  --color-olive-50: #f2f4ea;
-  --color-olive-100: #e5e9d8;
-  --color-olive-200: #ccd4b5;
-  --color-olive-300: #aebc8e;
-  --color-olive-400: #8b9d62;
-  --color-olive-500: #6d7f42;
-  --color-olive-600: #56662f;
-  --color-olive-700: #455226;
-  --color-olive-800: #37411f;
-  --color-olive-900: #2a3319;
+  --color-olive-50: #eef3ff;
+  --color-olive-100: #e3e8fe;
+  --color-olive-200: #c9d8fd;
+  --color-olive-300: #9dbbf8;
+  --color-olive-400: #6f97f4;
+  --color-olive-500: #2c6bed;
+  --color-olive-600: #2c6bed;
+  --color-olive-700: #1851b4;
+  --color-olive-800: #123f8f;
+  --color-olive-900: #3c3744;
 
-  --color-ink: #1e2118;
-  --color-muted: #6f6b5d;
-  --color-line: #ddd5c2;
-  --color-danger: #a44a32;
-  --color-danger-soft: #f7e7e0;
-  --color-tan: #b08355;
+  --color-ink: #1b1b1b;
+  --color-muted: #5e5e5e;
+  --color-line: #e9e9e9;
+  --color-danger: #b3261e;
+  --color-danger-soft: #fdeceb;
+  --color-tan: #a5cad5;
 }
 
 @layer base {
@@ -60,7 +60,7 @@
   }
 
   .btn-primary {
-    @apply bg-olive-700 text-cream-50 hover:bg-olive-800;
+    @apply bg-olive-600 text-cream-50 hover:bg-olive-700;
   }
 
   .btn-secondary {

@@ -37,7 +37,7 @@ The seed creates four weeks of timesheets: three approved or rejected weeks, plu
 | --- | --- |
 | Framework | Next.js 16.4 (App Router, React 19.3) |
 | Language | TypeScript 5.9, strict |
-| Styling | Tailwind CSS 4 with a cream and olive design system |
+| Styling | Tailwind CSS 4 with a blue and white design system |
 | Icons | lucide-react |
 | Database | Neon PostgreSQL via `@neondatabase/serverless` (HTTP driver) |
 | Auth | Signed JWT session cookie (`jose`), PBKDF2 password hashing |
@@ -206,7 +206,7 @@ docs/                Deployment notes
 
 ## Design
 
-The interface uses a cream background, olive green for primary actions, and a serif display face for headings. Status is always communicated with text as well as color. No emoji, no decorative illustrations, no gradients beyond a single soft accent.
+The interface uses a white surface, Signal-inspired ultramarine blue for primary actions, and a light blue hero block. Headings are set in Inter at extrabold weights. Status is always communicated with text as well as color. No emoji, no decorative illustrations, no gradients beyond a single soft accent.
 
 ---
 
