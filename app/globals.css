@@ -2,7 +2,7 @@
 
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
   --color-cream-50: #ffffff;
   --color-cream-100: #f6f6f6;
@@ -125,5 +125,174 @@
 
   .mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  }
+}
+
+@layer utilities {
+  @keyframes mkt-rise {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes mkt-fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes mkt-float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(var(--mkt-rotate, 0deg));
+    }
+    50% {
+      transform: translateY(-10px) rotate(var(--mkt-rotate, 0deg));
+    }
+  }
+
+  @keyframes mkt-drift {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(0, -18px, 0) scale(1.03);
+    }
+  }
+
+  @keyframes mkt-sweep {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes mkt-blink {
+    0%,
+    45% {
+      opacity: 1;
+    }
+    50%,
+    95% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .mkt-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 720ms cubic-bezier(0.22, 0.61, 0.36, 1),
+      transform 720ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .mkt-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mkt-enter {
+    animation: mkt-rise 820ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+
+  .mkt-enter-1 {
+    animation-delay: 90ms;
+  }
+
+  .mkt-enter-2 {
+    animation-delay: 180ms;
+  }
+
+  .mkt-enter-3 {
+    animation-delay: 270ms;
+  }
+
+  .mkt-enter-4 {
+    animation-delay: 360ms;
+  }
+
+  .mkt-fade {
+    animation: mkt-fade 1100ms ease both;
+  }
+
+  .mkt-float {
+    animation: mkt-float 7s ease-in-out infinite;
+  }
+
+  .mkt-float-slow {
+    animation: mkt-float 10s ease-in-out infinite;
+  }
+
+  .mkt-drift {
+    animation: mkt-drift 12s ease-in-out infinite;
+  }
+
+  .mkt-sweep {
+    transform-origin: left;
+    animation: mkt-sweep 900ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+
+  .mkt-blink {
+    animation: mkt-blink 3.6s ease-in-out infinite;
+  }
+
+  .mkt-link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1px;
+    transition: background-size 260ms ease;
+  }
+
+  .mkt-link-underline:hover {
+    background-size: 100% 1px;
+  }
+
+  .mkt-grid-lines {
+    background-image:
+      linear-gradient(to right, rgba(27, 27, 27, 0.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(27, 27, 27, 0.055) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .mkt-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .mkt-enter,
+    .mkt-fade,
+    .mkt-float,
+    .mkt-float-slow,
+    .mkt-drift,
+    .mkt-sweep,
+    .mkt-blink {
+      animation: none;
+    }
+
+    .mkt-link-underline {
+      transition: none;
+    }
   }
 }
