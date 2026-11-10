@@ -8,6 +8,8 @@ This is a portfolio project, not a commercial service.
 
 **Live demo:** https://sundial.kp489292.workers.dev — sign in with any account below. The database is seeded for evaluation and can be reset with `npm run db:reset`.
 
+[![Sundial landing page](docs/sundial-home.png)](https://sundial.kp489292.workers.dev)
+
 ## What is included
 
 - **Weekly timesheets** — add, edit, and delete entries; totals, billable hours, and utilization update immediately.
